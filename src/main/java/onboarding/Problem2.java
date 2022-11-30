@@ -16,6 +16,7 @@ public class Problem2 {
             }
             charStack.add(c);
         }
+        // Wrapper 클래스가 되어서 Object 를 사용하는지? Character::toString 작동 안함
         return charStack.stream().map(Object::toString).reduce("", (a,b)->String.join("", a, b));
     }
 
