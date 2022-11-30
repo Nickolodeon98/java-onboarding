@@ -5,7 +5,7 @@ public class Problem3 {
     public int countEachNums(String flow, String target) {
         int count = 0;
         while(flow.contains(target)) {
-            flow = flow.replace(target, "");
+            flow = flow.replaceFirst(target, "");
             count++;
         }
         return count;
@@ -24,6 +24,8 @@ public class Problem3 {
 
     public static int solution(int number) {
         int answer = 0;
+        Problem3 problem3 = new Problem3();
+        answer = problem3.countClap(number);
         return answer;
     }
 }
